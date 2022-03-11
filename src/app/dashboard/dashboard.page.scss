@@ -1,0 +1,30 @@
+.ion-text-center {
+    margin-right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: -5px -2px 10px #312e2b;
+  }
+  
+  ion-content {
+    --ion-background-color: #faf0e6;
+    text-align: center;
+  }
+  
+  ion-header {
+    background-color: #e7c5a2;
+    box-shadow: -2px -2px 10px #aca49d;
+  }
+
+  ion-item {
+    margin: 300px auto;
+    width: 500px; 
+}
+  ion-label {
+    color: black !important; 
+    font-size: 30px !important;
+}
+
+ion-icon {
+  color: black !important;
+  font-size: 40px;
+}

@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="transparent">
+
+    <ion-title class="ion-text-center">
+      SIGNUP
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="alignment-button" (click)="popclick($event)">
+        <ion-icon name="menu-outline">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <form [formGroup]="registrationForm" id="registerform">
+      <ion-item class="form-group" id="color" color="transparent">
+        <ion-label>Username:</ion-label>
+        <ion-input formControlName="username" type="text" class="form-control" placeholder="Create your Username"></ion-input>
+        <small slot="error" *ngIf="username.invalid && username.touched" class="text-danger">Username is required to have minimum of 6 letters.</small>
+      </ion-item>
+      <ion-item class="form-group" color="transparent">
+        <ion-label>Password:</ion-label>
+        <ion-input formControlName="password" type="password" class="form-control" placeholder="Create your Password"></ion-input>
+        <small slot="error" *ngIf="password.invalid && password.touched" class="text-danger">Minimum 8 Characters.<br>Password must contain atleast 1 Number, 1 Special Character, 1 Uppercase and 1 Lowercase.</small>
+      </ion-item>
+      <ion-item class="form-group" color="transparent">
+        <ion-label id="vrfylbl">Verify Password:</ion-label>
+        <ion-input formControlName="verifyPassword" type="password" class="form-control" placeholder="Verify your Password"></ion-input>
+        <small slot="error" *ngIf="registrationForm.get('verifyPassword').hasError('notSame')" class="text-danger">Password Doesn't match.</small>
+      </ion-item>
+      <ion-button [disabled]="registrationForm.invalid" (click)="register()" color='warning' id="register" shape="round" expand="block" type="submit">Register</ion-button>
+      <ion-button color="medium"  id="back" shape="round" routerLink="../home" routerDirection="root">Back</ion-button>
+    </form>
+  </div>
+</ion-content>

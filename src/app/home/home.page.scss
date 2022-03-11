@@ -1,0 +1,75 @@
+.ion-text-center {
+  margin-left: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: -5px -2px 10px #312e2b;
+}
+
+ion-content {
+  --ion-background-color: #faf0e6;
+}
+
+ion-header {
+  background-color: #e7c5a2;
+  box-shadow: -2px -2px 10px #aca49d;
+}
+
+ion-icon {
+  color: black !important;
+  font-size: 40px;
+}
+
+.container {
+  background-color: #e7c5a2;
+  border-radius: 15px;
+  margin: 220px auto;
+  width: 380px;
+  border: 5px solid #fdf0e3;
+  box-shadow: -2px -2px 10px #aca49d;
+}
+
+#loginform {
+  margin: auto;
+  padding: 90px 22px;
+  width: 100%;
+}
+
+
+#loginform ,ion-input{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  
+  
+}
+.form-group {
+  background-color: #e7c5a2;
+  border: 5px solid #e6bd95;
+  border-radius: 10px;
+  box-shadow: -2px -2px 10px #c2a07e;
+  color: black;
+}
+
+ion-label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: -2px 0px 15px #aca49d;
+}
+
+ion-input {
+  background-color: #e6bd95;
+  border-radius: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#login {
+  position: relative;
+  top: 20px;
+}
+#register {
+  position: relative;
+  margin-left: 100px;
+  top: 55px;
+
+}

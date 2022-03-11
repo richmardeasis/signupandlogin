@@ -1,0 +1,31 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="transparent">
+    <ion-title class="ion-text-center">
+      LOGIN
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="alignment-button" (click)="popclick($event)">
+        <ion-icon name="menu-outline">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <form [formGroup]="loginForm" id="loginform"> 
+      <ion-item class="form-group" color="transparent">
+        <ion-label>Username:</ion-label>
+        <ion-input formControlName="username" type="text"></ion-input>
+      </ion-item>
+      <ion-item class="form-group" color="transparent">
+        <ion-label>Password:</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <ion-button color='warning' (click)="login()" id="login" shape="round" expand="block">Login</ion-button>
+      <ion-button color="medium"  id="register" shape="round" routerLink="../signup" routerDirection="root">Register</ion-button>
+    </form>
+  </div>
+</ion-content>
