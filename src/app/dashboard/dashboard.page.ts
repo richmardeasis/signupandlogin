@@ -9,8 +9,12 @@ import { PopovertwoComponent } from '../popovertwo/popovertwo.component';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
+  labelusername: string;
 
-  constructor(public popoverController : PopoverController) { }
+  constructor(public popoverController : PopoverController) {
+    let lblusername = JSON.parse(sessionStorage.getItem('Username'));
+    this.labelusername = `Welcome ${lblusername} to nothing. Thank You!`;
+   }
 
   async popclick(event) {
     const popover = await this.popoverController.create({
@@ -23,4 +27,5 @@ export class DashboardPage implements OnInit {
   ngOnInit() {
   }
 
+  set 
 }
