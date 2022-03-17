@@ -52,6 +52,9 @@
 
     
     <form [formGroup]="userInformationForm">
+      <ion-item color="transparent" id="lblcreatepass">
+        <ion-label>Update Personal Information</ion-label>
+      </ion-item>
       <ion-item color="transparent">
         <ion-label class="label">Last Name: </ion-label>
         <ion-input formControlName="lastname" type="text" placeholder="Input your Last Name" id="lastname" class="input">{{ lastname }}</ion-input>
@@ -69,13 +72,14 @@
         <ion-input formControlName="email" type="email" placeholder="Input your Email Address" id="email" class="input">{{ email }}</ion-input>
       </ion-item>
       <ion-button [disabled]="userInformationForm.invalid" color="warning" id="update" (click)="updateinfo()"> Update</ion-button>
-      <ion-item color="transparent" id="lblcreatepass">
-        <ion-label>Create New Password </ion-label>
-      </ion-item>
+      
     </form>
 
 
     <form [formGroup]="userPasswordForm">
+      <ion-item color="transparent" id="lblcreatepass">
+        <ion-label>Create New Password </ion-label>
+      </ion-item>
       <ion-item color="transparent">
         <ion-label class="labeltwo">New Password: </ion-label>
         <ion-input formControlName="newpass" type="password" placeholder="Create your New Password" id="newpass" class="input"></ion-input>

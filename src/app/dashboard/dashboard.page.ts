@@ -32,7 +32,6 @@ export class DashboardPage implements OnInit {
     this.labelfirstname = firstname;
     this.labelmobilenumber = mobilenumber;
     this.labelemail = email;
-
    }
 
   async popclick(event) {
