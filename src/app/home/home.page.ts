@@ -33,8 +33,8 @@ export class HomePage implements OnInit {
   }
 
   login(){
-    let storedusername = JSON.parse(sessionStorage.getItem('Username'));
-    let storedpassword = JSON.parse(sessionStorage.getItem('Password'));
+    let storedusername = JSON.parse(localStorage.getItem('Username'));
+    let storedpassword = JSON.parse(localStorage.getItem('Password'));
     let inputusername = this.loginForm.get('username').value;
     let inputpassword = this.loginForm.get('password').value;
     if(inputusername === storedusername && inputpassword === storedpassword) {

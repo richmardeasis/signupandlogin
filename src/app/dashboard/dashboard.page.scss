@@ -1,5 +1,5 @@
 .ion-text-center {
-    margin-right: 30px;
+    margin-left: 55px;
     font-size: 30px;
     font-weight: bold;
     text-shadow: -5px -2px 10px #312e2b;
@@ -15,16 +15,93 @@
     box-shadow: -2px -2px 10px #aca49d;
   }
 
-  ion-item {
-    margin: 300px auto;
-    width: 700px; 
-}
-  ion-label {
-    color: black !important; 
-    font-size: 30px !important;
+  .image {
+    width: auto;
+    height: auto;
+  }
+
+  ion-icon {
+    color: black !important;
+    font-size: 40px;
 }
 
-ion-icon {
-  color: black !important;
-  font-size: 40px;
+.imagebtnupld {
+  margin: 50px 50px;
+  width: 300px;
 }
+
+.container {
+  background-color: #e7c5a2;
+  border-radius: 15px;
+  margin: 100px auto;
+  width: 380px;
+  border: 5px solid #fdf0e3;
+  box-shadow: -2px -2px 10px #aca49d;
+}
+
+
+#upload {
+  margin-bottom: 30px;
+  display: block;
+}
+
+ion-input[type='file'] {
+  color: transparent;
+  margin-left: 70px;
+
+}
+
+.containertwo {
+  background-color: #e7c5a2;
+  border-radius: 15px;
+  margin: 100px auto;
+  width: 430px;
+  border: 5px solid #fdf0e3;
+  box-shadow: -2px -2px 10px #aca49d;
+}
+
+#lblcreatepass {
+  text-align: center;
+}
+
+ ion-label {
+  color: black !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.label {
+  display: inline-block;
+  width: 150px;
+  text-align: justify;
+}
+.labeltwo {
+  display: inline-block;
+  width: 150px;
+  text-align: justify;
+}
+
+.input{
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+#update {
+  display: block;
+}
+
+
+.containerthree {
+  background-color: #e7c5a2;
+  border-radius: 15px;
+  margin: 100px auto;
+  width: 450px;
+  border: 5px solid #fdf0e3;
+  box-shadow: -2px -2px 10px #aca49d;
+}
+
+.lblinfo {
+  text-align: center;
+}
+

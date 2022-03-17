@@ -10,7 +10,85 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-item color="transparent">
-    <ion-label>{{ labelusername }}</ion-label>
-  </ion-item>
+
+
+  <div class="container">
+    <ion-item color="transparent" class="image">
+      <img src="{{ preview }}"/>
+    </ion-item>
+    <ion-item color="transparent" class="imagebtnupld">
+      <ion-input type="file"  (change)="onFileSelect($event)" accept="image/png, image/jpeg"> 
+      </ion-input>  
+    </ion-item>
+    <ion-button (click)="upload()" id="upload" color="warning">Upload</ion-button>
+  </div>
+
+  
+  <div class="containerthree">
+    <ion-item color="transparent">
+      <ion-label>Last Name:</ion-label>
+      <ion-label class="lblinfo">{{ labellastname }}</ion-label>
+
+    </ion-item>
+    <ion-item color="transparent">
+      <ion-label>First Name:</ion-label>
+      <ion-label class="lblinfo">{{ labelfirstname }}</ion-label>
+
+    </ion-item>
+    <ion-item color="transparent">
+      <ion-label>Mobile Number:</ion-label>
+      <ion-label class="lblinfo">{{ labelmobilenumber }}</ion-label>
+      
+    </ion-item>
+    <ion-item color="transparent">
+      <ion-label>Email Address:</ion-label>
+      <ion-label class="lblinfo">{{ labelemail }}</ion-label>
+
+    </ion-item>
+  </div>
+
+
+  <div class="containertwo">
+
+    
+    <form [formGroup]="userInformationForm">
+      <ion-item color="transparent">
+        <ion-label class="label">Last Name: </ion-label>
+        <ion-input formControlName="lastname" type="text" placeholder="Input your Last Name" id="lastname" class="input">{{ lastname }}</ion-input>
+      </ion-item>
+      <ion-item color="transparent">
+        <ion-label class="label">First Name: </ion-label>
+        <ion-input formControlName="firstname" type="text" placeholder="Input your First Name" id="firstname" class="input">{{ firstname }}</ion-input>
+      </ion-item>
+      <ion-item color="transparent">
+        <ion-label class="label">Mobile Number: </ion-label>
+        <ion-input formControlName="mobilenumber" type="tel" placeholder="Input your Mobile Number" id="mobilenumber" class="input">{{ mobilenumber }}</ion-input>
+      </ion-item>
+      <ion-item color="transparent">
+        <ion-label class="label">Email Address: </ion-label>
+        <ion-input formControlName="email" type="email" placeholder="Input your Email Address" id="email" class="input">{{ email }}</ion-input>
+      </ion-item>
+      <ion-button [disabled]="userInformationForm.invalid" color="warning" id="update" (click)="updateinfo()"> Update</ion-button>
+      <ion-item color="transparent" id="lblcreatepass">
+        <ion-label>Create New Password </ion-label>
+      </ion-item>
+    </form>
+
+
+    <form [formGroup]="userPasswordForm">
+      <ion-item color="transparent">
+        <ion-label class="labeltwo">New Password: </ion-label>
+        <ion-input formControlName="newpass" type="password" placeholder="Create your New Password" id="newpass" class="input"></ion-input>
+        <small slot="error" *ngIf="newpass.invalid && newpass.touched" class="text-danger">Minimum 8 Characters.<br>Password must contain atleast 1 Number, 1 Special Character, 1 Uppercase and 1 Lowercase.</small>
+      </ion-item>
+      <ion-item color="transparent">
+        <ion-label class="labeltwo">Verify New Password: </ion-label>
+        <ion-input formControlName="verifynewpass" type="password" placeholder="Verify your New Password" id="verifynewpass" class="input"></ion-input>
+        <small slot="error" *ngIf="userPasswordForm.get('verifynewpass').hasError('notSame')" class="text-danger">Password Doesn't match.</small>
+      </ion-item>
+      <ion-button [disabled]="userPasswordForm.invalid" color="warning" id="update" (click)="updatepass()"> Update</ion-button>
+    </form>
+  </div>
+
+
 </ion-content>

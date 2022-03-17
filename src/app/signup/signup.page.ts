@@ -36,8 +36,8 @@ export class SignupPage implements OnInit {
     )
   }
   register(){
-    sessionStorage.setItem('Username',JSON.stringify(this.registrationForm.get('username').value));
-    sessionStorage.setItem('Password',JSON.stringify(this.registrationForm.get('password').value));
+    localStorage.setItem('Username',JSON.stringify(this.registrationForm.get('username').value));
+    localStorage.setItem('Password',JSON.stringify(this.registrationForm.get('password').value));
     alert("Registration Success");
     console.log(this.registrationForm.value);
     this.registrationForm.reset();
